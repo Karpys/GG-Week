@@ -9,6 +9,7 @@ public class Ennemy : MonoBehaviour
     public List<int> ListId;
     public int ActualId;
     public float Speed;
+    public bool Loop;
     void Start()
     {
         GetPath();
@@ -27,15 +28,18 @@ public class Ennemy : MonoBehaviour
             if (ListId.Count==ActualId)
             {
                 ActualId = 0;
+                if(!Loop)
+                {
+                GetPath();
+                }
+
             }
         }
     }
 
     public void GetPath()
     {
-        ListId = new List<int>()
-        {
-            0,8,44,36
-        };
+        int rdm = Random.Range(0, Trans.ListPath.Count);
+        ListId = Trans.ListPath[rdm];
     }
 }
