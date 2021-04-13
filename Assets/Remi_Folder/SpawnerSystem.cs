@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class SpawnerSystem : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -12,6 +12,8 @@ public class SpawnerSystem : MonoBehaviour
     public int IdWave;
     public float Timer;
     public CreateGridTransform Trans;
+    public NextWaveText Text;
+    
     void Start()
     {
         
@@ -20,22 +22,30 @@ public class SpawnerSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        /*if (Input.GetKeyDown(KeyCode.E))
         {
             CreateWave(IdWave);
+        }*/
+        if(Timer>=0)
+        {
+            Timer -= Time.deltaTime;
         }
-        
         if(Timer<=0 && ListEnSpawn.Count>0)
         {
             SpawnEn();
         }else if(ListEnSpawn.Count==0 && Spawner.Count>0)
         {
-            CreateWave(IdWave);
+            if(Text.Activate<=0)
+            {
+                Text.gameObject.SetActive(true);
+                Text.Activate = 2.0f;
+            }
         }
 
 
-        Timer -= Time.deltaTime;
+       
     }
+
 
 
     public void SpawnEn()
