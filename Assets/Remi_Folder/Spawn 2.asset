@@ -15,4 +15,4 @@ MonoBehaviour:
   spawn:
   - En: {fileID: 7912763298301078430, guid: 867fc4c567922764c9c87f5f8c0c8d7a, type: 3}
     Nbr: 3
-    TimeBtw: 0.5
+    TimeBtw: 3
