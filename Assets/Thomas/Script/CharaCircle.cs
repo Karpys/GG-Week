@@ -7,7 +7,9 @@ public class CharaCircle : MonoBehaviour
     private Rigidbody2D rgb;
 
     [SerializeField]
-    private float charaSpeed;
+    private float charaSpeed = 0f;
+    [SerializeField]
+    private GameObject point = null;
 
     private Vector2 moveDirection;
     private float moveX;
@@ -26,14 +28,23 @@ public class CharaCircle : MonoBehaviour
     {
         Move();
 
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector2 charaMouse = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+        Vector2 v = new Vector3(point.transform.position.x - transform.position.x, point.transform.position.y - transform.position.y);
+        Vector2 n = Vector2.Perpendicular(v);
+
         Vector3 charaterFlip = transform.localScale;
-        if(moveX < 0)
+        //ATTENTION : A MODIFIER LORS DE LA MISE DES SPRITES (ENLEVER LE SYSTEME SCALE ET METTRE "SPRITE FLIP")
+        if(Vector2.Dot(n, charaMouse) > 0 && charaterFlip.x < 0)
         {
-            charaterFlip.x = -1;
+            charaterFlip.x *= -1;
+            Debug.Log("droite");
         }
-        else if(moveX > 0)
+        else if(Vector2.Dot(n, charaMouse) < 0 && charaterFlip.x > 0)
         {
-            charaterFlip.x = 1;
+            charaterFlip.x *= -1;
+            Debug.Log("gauche");
         }
         transform.localScale = charaterFlip;
     }
