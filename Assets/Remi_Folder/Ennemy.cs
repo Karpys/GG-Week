@@ -15,11 +15,17 @@ public class Ennemy : MonoBehaviour
     public CharacherAnim Anim;
     public EnemiesWeapon Weapon;
     public bool Right;
+
+    [Header("Health")]
+    public int maxHealth = 3;
+    [SerializeField]
+    private int currentHealth;
     void Start()
     {
         GetPath();
         SpeedSet = Speed;
         transform.position = Trans.ListTransform[ListId[0]].transform.position;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -59,5 +65,18 @@ public class Ennemy : MonoBehaviour
     {
         int rdm = Random.Range(0, Trans.ListPath.Count);
         ListId = Trans.ListPath[rdm];
+    }
+
+    public void HurtEnemy(int damageToGive)
+    {
+        currentHealth -= damageToGive;
+        Debug.Log("Enemy - 1");
+
+        if (currentHealth <= 0)
+        {
+            gameObject.SetActive(false);
+
+            Time.timeScale = 0;
+        }
     }
 }

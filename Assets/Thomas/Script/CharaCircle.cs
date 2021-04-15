@@ -6,6 +6,7 @@ public class CharaCircle : MonoBehaviour
 {
     private Rigidbody2D rgb;
 
+    [Header("Character Movement")]
     [SerializeField]
     private float charaSpeed = 0f;
     [SerializeField]
@@ -17,16 +18,21 @@ public class CharaCircle : MonoBehaviour
     public bool Controller;
     public MouvementPersoTest Mouv;
 
+    [Header("Health")]
+    public int maxHealth = 3;
+    public int currentHealth;
+
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     void Update()
     {
         if(!Controller)
         {
-        ProcessInput();
+            ProcessInput();
         }else
         {
             moveDirection = Mouv.Vec.normalized;
@@ -76,5 +82,19 @@ public class CharaCircle : MonoBehaviour
             Anim.SetBool("Mouving", false);
         }
         rgb.velocity = new Vector2(moveDirection.x * charaSpeed, moveDirection.y * charaSpeed);
+    }
+
+    public void HurtPlayer(int damageToGive)
+    {
+        currentHealth -= damageToGive;
+        Debug.Log("Player - 1");
+        Debug.Log(damageToGive);
+
+        if (currentHealth <= 0)
+        {
+            gameObject.SetActive(false);
+
+            Time.timeScale = 0;
+        }
     }
 }

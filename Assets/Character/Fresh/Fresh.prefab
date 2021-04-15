@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 996257529145456018}
   - component: {fileID: 996257529145456020}
   - component: {fileID: 6951838923118961891}
+  - component: {fileID: 1270866370346935434}
   m_Layer: 0
   m_Name: Fresh
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,6 +144,24 @@ MonoBehaviour:
   Anim: {fileID: 996257529145456020}
   Weapon: {fileID: 6977104311303392697}
   Right: 0
+  maxHealth: 3
+  currentHealth: 0
+--- !u!70 &1270866370346935434
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996257529145456023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.27}
+  m_Size: {x: 2.25, y: 6.08}
+  m_Direction: 0
 --- !u!1 &6915043257180373307
 GameObject:
   m_ObjectHideFlags: 0
