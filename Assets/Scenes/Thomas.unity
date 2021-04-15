@@ -303,6 +303,7 @@ MonoBehaviour:
   projectile: {fileID: 8794354454017925931, guid: 0b9a5cbae2b3e81438531bb210208154,
     type: 3}
   shotPos: {fileID: 978505871}
+  startTimeBtwShots: 0.5
 --- !u!212 &1470278496
 SpriteRenderer:
   m_ObjectHideFlags: 0

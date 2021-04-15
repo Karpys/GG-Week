@@ -9,10 +9,17 @@ public class Ennemy : MonoBehaviour
     public List<int> ListId;
     public int ActualId;
     public float Speed;
+    public float SpeedSet;
     public bool Loop;
+    public GameObject Target;
+    public CharacherAnim Anim;
+    public EnemiesWeapon Weapon;
+    public bool Right;
     void Start()
     {
         GetPath();
+        SpeedSet = Speed;
+        transform.position = Trans.ListTransform[0].transform.position;
     }
 
     // Update is called once per frame
@@ -34,6 +41,17 @@ public class Ennemy : MonoBehaviour
                 }
 
             }
+        }
+
+        if(transform.position.x>Target.transform.position.x)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+            Right = false;
+        }
+        else
+        {
+            Right = true;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 

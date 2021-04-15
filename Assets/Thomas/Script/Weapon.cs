@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     public Transform shotPos;
 
     private float timeBtwShots;
-    private float startTimeBtwShots;
+    public float startTimeBtwShots;
 
     private void Update()
     {

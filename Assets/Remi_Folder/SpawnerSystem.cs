@@ -13,6 +13,7 @@ public class SpawnerSystem : MonoBehaviour
     public float Timer;
     public CreateGridTransform Trans;
     public NextWaveText Text;
+    public GameObject Target;
     
     void Start()
     {
@@ -52,6 +53,7 @@ public class SpawnerSystem : MonoBehaviour
     {
         GameObject En = Instantiate(ListEnSpawn[0], transform.position, transform.rotation);
         En.GetComponent<Ennemy>().Trans = Trans;
+        En.GetComponent<Ennemy>().Target = Target;
         Timer = TimeBetweenSpawn[0];
         ListEnSpawn.Remove(ListEnSpawn[0]);
         TimeBetweenSpawn.Remove(TimeBetweenSpawn[0]);
