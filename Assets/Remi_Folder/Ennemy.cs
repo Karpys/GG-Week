@@ -19,7 +19,7 @@ public class Ennemy : MonoBehaviour
     {
         GetPath();
         SpeedSet = Speed;
-        transform.position = Trans.ListTransform[0].transform.position;
+        transform.position = Trans.ListTransform[ListId[0]].transform.position;
     }
 
     // Update is called once per frame
