@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &44098572
 RectTransform:
   m_ObjectHideFlags: 0
@@ -588,6 +588,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1190225502, guid: db9731ee82692aa40bcdeaa47569e47b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2884829277292160212, guid: db9731ee82692aa40bcdeaa47569e47b,
         type: 3}
       propertyPath: point
@@ -832,11 +836,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5d1adea7852c1409480da8621c808c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawner:
-  - {fileID: 11400000, guid: 569512759248f1d4cbea4d79b626c5cd, type: 2}
   MaxId: 0
-  ListEnSpawn: []
-  TimeBetweenSpawn: []
+  ListEnSpawn:
+  - {fileID: 667821467098423237, guid: b6e4058e3f3d4a14892b246de40923f5, type: 3}
+  - {fileID: 4769672699919689862, guid: e85c60364fb2cb74aa2b4c94415379c4, type: 3}
+  - {fileID: 996257529145456023, guid: 21756195bb1427b4db36f14b935040f7, type: 3}
+  TimeBetweenSpawn: 5
   IdWave: 0
   Timer: 0
   Trans: {fileID: 1997791178}
