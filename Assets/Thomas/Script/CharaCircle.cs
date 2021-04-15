@@ -13,6 +13,7 @@ public class CharaCircle : MonoBehaviour
 
     private Vector2 moveDirection;
     private float moveX;
+    public Animator Anim;
 
     void Start()
     {
@@ -59,6 +60,13 @@ public class CharaCircle : MonoBehaviour
 
     void Move()
     {
+        if(moveDirection!=Vector2.zero)
+        {
+            Anim.SetBool("Mouving",true);
+        }else
+        {
+            Anim.SetBool("Mouving", false);
+        }
         rgb.velocity = new Vector2(moveDirection.x * charaSpeed, moveDirection.y * charaSpeed);
     }
 }

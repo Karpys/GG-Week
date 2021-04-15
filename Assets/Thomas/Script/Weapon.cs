@@ -9,6 +9,9 @@ public class Weapon : MonoBehaviour
 
     private float timeBtwShots;
     public float startTimeBtwShots;
+    public Animator Anim;
+    public bool Attacking;
+    public bool Attack;
 
     private void Update()
     {
@@ -22,12 +25,14 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                Anim.SetBool("Attack", true);
                 Instantiate(projectile, shotPos.position, shotPos.rotation);
                 timeBtwShots = startTimeBtwShots;
             }
         }
         else
         {
+            Anim.SetBool("Attack", false);
             timeBtwShots -= Time.deltaTime;
         }
     }
