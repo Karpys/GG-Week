@@ -14,6 +14,8 @@ public class CharaCircle : MonoBehaviour
     private Vector2 moveDirection;
     private float moveX;
     public Animator Anim;
+    public bool Controller;
+    public MouvementPersoTest Mouv;
 
     void Start()
     {
@@ -22,7 +24,13 @@ public class CharaCircle : MonoBehaviour
 
     void Update()
     {
+        if(!Controller)
+        {
         ProcessInput();
+        }else
+        {
+            moveDirection = Mouv.Vec.normalized;
+        }
     }
 
     private void FixedUpdate()
