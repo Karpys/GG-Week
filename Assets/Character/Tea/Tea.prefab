@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3460604880734192817}
   m_Layer: 0
   m_Name: Tea
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,3 +117,4 @@ MonoBehaviour:
   Anim: {fileID: 3460604880734192819}
   Attacking: 0
   Attack: 0
+  Ennemy: {fileID: 0}

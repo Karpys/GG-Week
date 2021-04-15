@@ -22,10 +22,17 @@ public class CharaCircle : MonoBehaviour
     public int maxHealth = 3;
     public int currentHealth;
 
+    private bool flashActive;
+    [SerializeField]
+    private float flashLenght = 0f;
+    private float flashCounter = 0f;
+    private SpriteRenderer playerSprite;
+
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -36,6 +43,44 @@ public class CharaCircle : MonoBehaviour
         }else
         {
             moveDirection = Mouv.Vec.normalized;
+        }
+
+        if (flashActive)
+        {
+            if (flashCounter > flashLenght * .99f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+            }
+            else if (flashCounter > flashLenght * .82f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+            }
+            else if (flashCounter > flashLenght * .66f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+            }
+            else if (flashCounter > flashLenght * .49f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+            }
+            else if (flashCounter > flashLenght * .33f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+            }
+            else if (flashCounter > flashLenght * .16f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+            }
+            else if (flashCounter > 0f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+            }
+            else
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+                flashActive = false;
+            }
+            flashCounter -= Time.deltaTime;
         }
     }
 
@@ -54,12 +99,12 @@ public class CharaCircle : MonoBehaviour
         if(Vector2.Dot(n, charaMouse) > 0 && charaterFlip.x < 0)
         {
             charaterFlip.x *= -1;
-            Debug.Log("droite");
+            //Debug.Log("droite");
         }
         else if(Vector2.Dot(n, charaMouse) < 0 && charaterFlip.x > 0)
         {
             charaterFlip.x *= -1;
-            Debug.Log("gauche");
+            //Debug.Log("gauche");
         }
         transform.localScale = charaterFlip;
     }
@@ -87,8 +132,10 @@ public class CharaCircle : MonoBehaviour
     public void HurtPlayer(int damageToGive)
     {
         currentHealth -= damageToGive;
-        Debug.Log("Player - 1");
-        Debug.Log(damageToGive);
+        //Debug.Log("Player - 1");
+        //Debug.Log(damageToGive);
+        flashActive = true;
+        flashCounter = flashLenght;
 
         if (currentHealth <= 0)
         {

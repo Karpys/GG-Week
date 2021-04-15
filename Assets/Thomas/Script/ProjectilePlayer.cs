@@ -41,16 +41,16 @@ public class ProjectilePlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("hit");
+        /*Debug.Log("hit");
         Debug.Log(other.gameObject.tag);
-        Debug.Log(other.gameObject.name);
+        Debug.Log(other.gameObject.name);*/
 
         if(other.gameObject.tag.Equals("Enemy"))
         {
             //other.gameObject.GetComponent<Ennemy>().HurtEnemy(damageToGive);
             Destroy(gameObject);
             Destroy(other.gameObject);
-            Debug.Log("Enemy hit");
+            //Debug.Log("Enemy hit");
         }
     }
 }

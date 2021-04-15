@@ -113,9 +113,10 @@ GameObject:
   - component: {fileID: 4769672699919689864}
   - component: {fileID: 4769672699919689863}
   - component: {fileID: 47925292485792259}
+  - component: {fileID: 8346952168768770217}
   m_Layer: 0
   m_Name: Choco
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,3 +244,21 @@ MonoBehaviour:
   Anim: {fileID: 4769672699919689863}
   Weapon: {fileID: 444070745}
   Right: 0
+  maxHealth: 3
+  currentHealth: 0
+--- !u!70 &8346952168768770217
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4769672699919689862}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.32, y: -0.17}
+  m_Size: {x: 3.81, y: 5.37}
+  m_Direction: 0

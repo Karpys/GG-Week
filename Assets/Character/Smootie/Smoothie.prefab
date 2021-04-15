@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 667821467098423232}
   - component: {fileID: 667821467098423238}
   - component: {fileID: 7272779365366140593}
+  - component: {fileID: 7975843152452170737}
   m_Layer: 0
   m_Name: Smoothie
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,6 +144,24 @@ MonoBehaviour:
   Anim: {fileID: 667821467098423238}
   Weapon: {fileID: 7224998110149748715}
   Right: 0
+  maxHealth: 3
+  currentHealth: 0
+--- !u!70 &7975843152452170737
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667821467098423237}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1, y: -0.3}
+  m_Size: {x: 3.71, y: 4.81}
+  m_Direction: 0
 --- !u!1 &6584497760400026473
 GameObject:
   m_ObjectHideFlags: 0

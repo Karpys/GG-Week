@@ -67,7 +67,7 @@ public class Ennemy : MonoBehaviour
         ListId = Trans.ListPath[rdm];
     }
 
-    public void HurtEnemy(int damageToGive)
+    /*public void HurtEnemy(int damageToGive)
     {
         currentHealth -= damageToGive;
         Debug.Log("Enemy - 1");
@@ -78,5 +78,5 @@ public class Ennemy : MonoBehaviour
 
             Time.timeScale = 0;
         }
-    }
+    }*/
 }
