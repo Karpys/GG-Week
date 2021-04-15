@@ -5,10 +5,11 @@ using TMPro;
 public class SpawnerSystem : MonoBehaviour
 {
     // Start is called before the first frame update
-    public List<Spawn> Spawner;
+    /*public List<Spawn> Spawner;*/
     public int MaxId;
     public List<GameObject> ListEnSpawn;
-    public List<float> TimeBetweenSpawn;
+    /*public List<float> TimeBetweenSpawn;*/
+    public float TimeBetweenSpawn;
     public int IdWave;
     public float Timer;
     public CreateGridTransform Trans;
@@ -34,14 +35,14 @@ public class SpawnerSystem : MonoBehaviour
         if(Timer<=0 && ListEnSpawn.Count>0)
         {
             SpawnEn();
-        }else if(ListEnSpawn.Count==0 && Spawner.Count>0)
+        }/*else if(ListEnSpawn.Count==0 && Spawner.Count>0)
         {
             if(Text.Activate<=0)
             {
                 Text.gameObject.SetActive(true);
                 Text.Activate = 2.0f;
-            }
-        }
+            }*/
+        
 
 
        
@@ -51,14 +52,12 @@ public class SpawnerSystem : MonoBehaviour
 
     public void SpawnEn()
     {
-        GameObject En = Instantiate(ListEnSpawn[0], transform.position, transform.rotation);
+        GameObject En = Instantiate(ListEnSpawn[Random.Range(0,ListEnSpawn.Count)], transform.position, transform.rotation);
         En.GetComponent<Ennemy>().Trans = Trans;
         En.GetComponent<Ennemy>().Target = Target;
-        Timer = TimeBetweenSpawn[0];
-        ListEnSpawn.Remove(ListEnSpawn[0]);
-        TimeBetweenSpawn.Remove(TimeBetweenSpawn[0]);
+        Timer = TimeBetweenSpawn;
     }
-    public void CreateWave(int id)
+    /*public void CreateWave(int id)
     {
         int MaxId = 0;
         for (int i = 0; i < Spawner[id].spawn.Count; i++)
@@ -83,6 +82,6 @@ public class SpawnerSystem : MonoBehaviour
             }
         }
         Spawner.Remove(Spawner[0]);
-        /*IdWave += 1;*/
-    }
+        *//*IdWave += 1;*//*
+    }*/
 }

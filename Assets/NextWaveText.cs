@@ -17,7 +17,7 @@ public class NextWaveText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Activate>=0)
+       /* if(Activate>=0)
         {
         Activate -= Time.deltaTime;
         }
@@ -26,7 +26,7 @@ public class NextWaveText : MonoBehaviour
         {
             Spawner.CreateWave(Spawner.IdWave);
             gameObject.SetActive(false);
-        }
+        }*/
         
     }
 }
