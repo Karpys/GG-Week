@@ -14,7 +14,13 @@ public class Ennemy : MonoBehaviour
     public GameObject Target;
     public CharacherAnim Anim;
     public EnemiesWeapon Weapon;
+    public GameObject Ondie;
+    public GameObject OnHit;
+    public SpawnerSystem Spawn;
     public bool Right;
+    public Color Blank;
+    public Color Full;
+    public float Timef;
 
     [Header("Health")]
     public int maxHealth = 3;
@@ -31,6 +37,11 @@ public class Ennemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Timef<1)
+        {
+        Timef += Time.deltaTime;
+        GetComponent<SpriteRenderer>().color = Color.Lerp(Blank, Full, Timef );
+        }
         if(transform.position!=Trans.ListTransform[ListId[ActualId]].transform.position)
         {
             transform.position=Vector3.MoveTowards(transform.position, Trans.ListTransform[ListId[ActualId]].transform.position, Speed * Time.deltaTime);

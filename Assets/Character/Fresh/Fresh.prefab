@@ -143,7 +143,12 @@ MonoBehaviour:
   Target: {fileID: 0}
   Anim: {fileID: 996257529145456020}
   Weapon: {fileID: 6977104311303392697}
+  Ondie: {fileID: 3756090830125920861, guid: da0f246d9322c674cae9e7ca6dd58167, type: 3}
+  OnHit: {fileID: 8765599864275662881, guid: bde8da564b816104d99355eb6484976e, type: 3}
   Right: 0
+  Blank: {r: 0, g: 0, b: 0, a: 0}
+  Full: {r: 1, g: 1, b: 1, a: 1}
+  Timef: 0
   maxHealth: 3
   currentHealth: 0
 --- !u!70 &1270866370346935434

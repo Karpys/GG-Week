@@ -7,7 +7,7 @@ public class ProjectilePlayer : MonoBehaviour
     public float speed;
     public float lifeTime;
     public int damageToGive = 1;
-
+    public float rot;
     //public GameObject destroyEffect;
 
     private void Start()
@@ -18,7 +18,7 @@ public class ProjectilePlayer : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector2.up * speed * Time.deltaTime);
-
+        
         /*Collider2D collider = Physics2D.OverlapCircle(transform.position, 10);
 
         if (!collider)
@@ -48,6 +48,9 @@ public class ProjectilePlayer : MonoBehaviour
         if(other.gameObject.tag.Equals("Enemy"))
         {
             //other.gameObject.GetComponent<Ennemy>().HurtEnemy(damageToGive);
+            other.gameObject.GetComponent<Ennemy>().Spawn.Counter -= 1;
+            Instantiate(other.gameObject.GetComponent<Ennemy>().Ondie, other.gameObject.transform.position, other.gameObject.transform.rotation);
+            Instantiate(other.gameObject.GetComponent<Ennemy>().OnHit, new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z-1), other.gameObject.transform.rotation);
             Destroy(gameObject);
             Destroy(other.gameObject);
             //Debug.Log("Enemy hit");

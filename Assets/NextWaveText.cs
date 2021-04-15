@@ -17,16 +17,16 @@ public class NextWaveText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* if(Activate>=0)
+        if (Activate >= 0)
         {
-        Activate -= Time.deltaTime;
+            Activate -= Time.deltaTime;
         }
 
-        if (Activate<0)
+        if (Activate < 0)
         {
-            Spawner.CreateWave(Spawner.IdWave);
+            Spawner.CreateWave(Random.Range(0, Spawner.Spawner.Count));
             gameObject.SetActive(false);
-        }*/
-        
+        }
+
     }
 }

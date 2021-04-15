@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af56543c413b7924b83aa5dbc62b7855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 8794354454017925931, guid: 0b9a5cbae2b3e81438531bb210208154,
+  projectile: {fileID: 1552635884384520553, guid: 415c39265f98f2344860b4518d3f9389,
     type: 3}
   shotPosRight: {fileID: 444070744}
   shotPosLeft: {fileID: 6975741886350338033}
@@ -243,7 +243,12 @@ MonoBehaviour:
   Target: {fileID: 0}
   Anim: {fileID: 4769672699919689863}
   Weapon: {fileID: 444070745}
+  Ondie: {fileID: 4512696408468687888, guid: 9a5e5ef33edfecb4faa62ea0d2c35894, type: 3}
+  OnHit: {fileID: 6351607688081642920, guid: 02cac3b0713619b499c48155a7444188, type: 3}
   Right: 0
+  Blank: {r: 0, g: 0, b: 0, a: 0}
+  Full: {r: 1, g: 1, b: 1, a: 1}
+  Timef: 0
   maxHealth: 3
   currentHealth: 0
 --- !u!70 &8346952168768770217

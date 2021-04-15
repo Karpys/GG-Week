@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3921975430187033666}
   - component: {fileID: 6105667500847016626}
   - component: {fileID: 3521932623172004848}
+  - component: {fileID: -8203637287600359732}
+  - component: {fileID: 2135036034329227544}
   m_Layer: 0
   m_Name: SmootheTir
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6263678146442187739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.7773829, y: 0.66995615, z: -1158.4513}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -114,5 +116,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43eb1d79d8d7434b83f48c2147a212e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 8
   lifeTime: 2
+  damageToGive: 1
+--- !u!70 &-8203637287600359732
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6263678146442187739}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03602465, y: -0.10812998}
+  m_Size: {x: 3.0111082, y: 3.1517568}
+  m_Direction: 0
+--- !u!50 &2135036034329227544
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6263678146442187739}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

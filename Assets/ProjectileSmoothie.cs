@@ -9,9 +9,9 @@ public class ProjectileSmoothie : MonoBehaviour
     void Start()
     {
         Instantiate(Smoothie, transform.position, transform.rotation);
-        transform.Rotate(0, 0, 20);
+        transform.Rotate(0, 0, 30);
         Instantiate(Smoothie, transform.position, transform.rotation);
-        transform.Rotate(0, 0, -40);
+        transform.Rotate(0, 0, -60);
         Instantiate(Smoothie, transform.position, transform.rotation);
     }
 

@@ -837,16 +837,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxId: 0
-  ListEnSpawn:
-  - {fileID: 667821467098423237, guid: b6e4058e3f3d4a14892b246de40923f5, type: 3}
-  - {fileID: 4769672699919689862, guid: e85c60364fb2cb74aa2b4c94415379c4, type: 3}
-  - {fileID: 996257529145456023, guid: 21756195bb1427b4db36f14b935040f7, type: 3}
-  TimeBetweenSpawn: 5
+  ListEnSpawn: []
+  Spawner:
+  - {fileID: 11400000, guid: 569512759248f1d4cbea4d79b626c5cd, type: 2}
+  TimeBetweenSpawn: []
   IdWave: 0
   Timer: 0
   Trans: {fileID: 1997791178}
   Text: {fileID: 44098573}
   Target: {fileID: 986946585}
+  Counter: 0
 --- !u!1 &1997791177
 GameObject:
   m_ObjectHideFlags: 0
