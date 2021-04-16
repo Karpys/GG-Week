@@ -216,7 +216,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cb1a9d12139bede40bc9d5bc145f13e6, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &44098576
@@ -1340,6 +1340,7 @@ MonoBehaviour:
   Spawner:
   - {fileID: 11400000, guid: eda3a8cd68fb8fb4d9d1c63905ae4388, type: 2}
   - {fileID: 11400000, guid: 569512759248f1d4cbea4d79b626c5cd, type: 2}
+  - {fileID: 11400000, guid: 3b6e2c72714726040bf910b82180fbe2, type: 2}
   TimeBetweenSpawn: []
   IdWave: 0
   Timer: 0

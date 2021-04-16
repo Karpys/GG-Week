@@ -10,15 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd7ed59beca9b8f4cbfb61d110decd9c, type: 3}
-  m_Name: Spawn 2
+  m_Name: Spawn3
   m_EditorClassIdentifier: 
   spawn:
   - En: {fileID: 4769672699919689862, guid: e85c60364fb2cb74aa2b4c94415379c4, type: 3}
-    Nbr: 3
-    TimeBtw: 1.5
-  - En: {fileID: 996257529145456023, guid: 21756195bb1427b4db36f14b935040f7, type: 3}
-    Nbr: 3
-    TimeBtw: 1.5
+    Nbr: 1
+    TimeBtw: 1
   - En: {fileID: 667821467098423237, guid: b6e4058e3f3d4a14892b246de40923f5, type: 3}
     Nbr: 3
-    TimeBtw: 1.5
+    TimeBtw: 3
+  - En: {fileID: 996257529145456023, guid: 21756195bb1427b4db36f14b935040f7, type: 3}
+    Nbr: 2
+    TimeBtw: 0.5
+  - En: {fileID: 667821467098423237, guid: b6e4058e3f3d4a14892b246de40923f5, type: 3}
+    Nbr: 1
+    TimeBtw: 3
+  - En: {fileID: 0}
+    Nbr: 0
+    TimeBtw: 0
