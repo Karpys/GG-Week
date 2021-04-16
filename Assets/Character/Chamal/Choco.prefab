@@ -47,7 +47,7 @@ MonoBehaviour:
     type: 3}
   shotPosRight: {fileID: 444070744}
   shotPosLeft: {fileID: 6975741886350338033}
-  startTimeBtwShots: 3
+  startTimeBtwShots: 2
   Shooting: 1
   En: {fileID: 47925292485792259}
 --- !u!1 &4549915815030323163
@@ -97,7 +97,7 @@ MonoBehaviour:
     type: 3}
   shotPosRight: {fileID: 0}
   shotPosLeft: {fileID: 0}
-  startTimeBtwShots: 3
+  startTimeBtwShots: 2
   Shooting: 0
   En: {fileID: 47925292485792259}
 --- !u!1 &4769672699919689862
