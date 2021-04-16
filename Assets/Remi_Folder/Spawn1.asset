@@ -14,5 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn:
   - En: {fileID: 996257529145456023, guid: 21756195bb1427b4db36f14b935040f7, type: 3}
+    Nbr: 2
+    TimeBtw: 1
+  - En: {fileID: 4769672699919689862, guid: e85c60364fb2cb74aa2b4c94415379c4, type: 3}
     Nbr: 5
+    TimeBtw: 1
+  - En: {fileID: 667821467098423237, guid: b6e4058e3f3d4a14892b246de40923f5, type: 3}
+    Nbr: 2
+    TimeBtw: 1
+  - En: {fileID: 996257529145456023, guid: 21756195bb1427b4db36f14b935040f7, type: 3}
+    Nbr: 1
     TimeBtw: 1

@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 996257529145456023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.7831597, y: -2.5073028, z: -1144.782}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 6977104311303392696}
   - {fileID: 8293817582850321}
@@ -145,6 +145,7 @@ MonoBehaviour:
   Weapon: {fileID: 6977104311303392697}
   Ondie: {fileID: 3756090830125920861, guid: da0f246d9322c674cae9e7ca6dd58167, type: 3}
   OnHit: {fileID: 8765599864275662881, guid: bde8da564b816104d99355eb6484976e, type: 3}
+  Spawn: {fileID: 0}
   Right: 0
   Blank: {r: 0, g: 0, b: 0, a: 0}
   Full: {r: 1, g: 1, b: 1, a: 1}

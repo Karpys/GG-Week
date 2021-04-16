@@ -226,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 2884829277292160213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4231222, y: -1.6846741, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 2884829275882001706}
   - {fileID: 1190225504}
@@ -323,6 +323,7 @@ MonoBehaviour:
   Mouv: {fileID: 7389507708628118848}
   maxHealth: 3
   currentHealth: 0
+  flashLenght: 0
 --- !u!95 &5000300991493690375
 Animator:
   serializedVersion: 3

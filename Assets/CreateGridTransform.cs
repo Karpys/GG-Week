@@ -14,7 +14,7 @@ public class CreateGridTransform : MonoBehaviour
     {
         new List<int>(){0, 8, 44, 36},
         new List<int>(){3,25,39,18},
-        new List<int>(){0,8,36,44},
+        new List<int>(){44,8,36,0},
         new List<int>(){20,36,44,23,8,0}
     };
     void Start()
