@@ -21,6 +21,7 @@ public class CharaCircle : MonoBehaviour
     [Header("Health")]
     public int maxHealth = 3;
     public int currentHealth;
+    public GameObject gameOver;
 
     private bool flashActive;
     [SerializeField]
@@ -140,6 +141,7 @@ public class CharaCircle : MonoBehaviour
         if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
+            gameOver.SetActive(true);
 
             Time.timeScale = 0;
         }
