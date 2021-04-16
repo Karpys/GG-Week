@@ -265,6 +265,6 @@ MonoBehaviour:
     type: 3}
   shotPosRight: {fileID: 6977104311303392696}
   shotPosLeft: {fileID: 8293817582850321}
-  startTimeBtwShots: 3
+  startTimeBtwShots: 1.5
   Shooting: 1
   En: {fileID: 6951838923118961891}
