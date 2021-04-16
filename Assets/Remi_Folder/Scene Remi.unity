@@ -214,7 +214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next Wave
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -791,6 +791,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2884829275882001684, guid: db9731ee82692aa40bcdeaa47569e47b,
+        type: 3}
+      propertyPath: Sound
+      value: 
+      objectReference: {fileID: 1261344957}
     - target: {fileID: 2884829277292160212, guid: db9731ee82692aa40bcdeaa47569e47b,
         type: 3}
       propertyPath: point
@@ -809,12 +814,12 @@ PrefabInstance:
     - target: {fileID: 2884829277292160233, guid: db9731ee82692aa40bcdeaa47569e47b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7505286
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 2884829277292160233, guid: db9731ee82692aa40bcdeaa47569e47b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.928824
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2884829277292160233, guid: db9731ee82692aa40bcdeaa47569e47b,
         type: 3}
@@ -913,6 +918,81 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 730053276}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1261344956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1261344958}
+  - component: {fileID: 1261344957}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1261344957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261344956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fa0a2704b04094ba8bff5f5d3d1083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musique:
+  - name: Main_Theme
+    clip: {fileID: 8300000, guid: 5ac854e09f71fb94bbce265551ebe4f9, type: 3}
+    volume: 0.502
+    loop: 1
+    source: {fileID: 0}
+  sfx:
+  - name: Start_Wave
+    clip: {fileID: 8300000, guid: ed1af07150240c84e96705e497b0e838, type: 3}
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot_En
+    clip: {fileID: 8300000, guid: 32aa016e84d8763419e22f9c13c5cc25, type: 3}
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot_Sarba
+    clip: {fileID: 8300000, guid: a41fe758ce0b6344fa3ae7e7cd51029b, type: 3}
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: b8f71495a21c0904ca2d84fba8f0ba23, type: 3}
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot_Weap
+    clip: {fileID: 8300000, guid: 4bfb5ffd5c9511941aec2ab6a9a763dd, type: 3}
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &1261344958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261344956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4288526, y: 0.24844036, z: -1181.8972}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1354678745
 GameObject:
   m_ObjectHideFlags: 0
