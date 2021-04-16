@@ -19,6 +19,7 @@ public class NextWaveText : MonoBehaviour
     {
         if (Activate >= 0)
         {
+            Text.text = "~ Wave " + Spawner.NbrWave.ToString() + " ~";
             Activate -= Time.deltaTime;
         }
 
