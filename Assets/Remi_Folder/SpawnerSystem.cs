@@ -17,6 +17,7 @@ public class SpawnerSystem : MonoBehaviour
     public NextWaveText Text;
     public GameObject Target;
     public int Counter;
+    public int NbrWave;
     
     void Start()
     {
@@ -92,7 +93,8 @@ public class SpawnerSystem : MonoBehaviour
                 ActualSpawner += 1;
             }
         }
-       /* Spawner.Remove(Spawner[0]);*/
+        /* Spawner.Remove(Spawner[0]);*/
+        NbrWave += 1;
         IdWave += 1;
     }
 }

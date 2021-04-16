@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
     public Animator Anim;
+    public SoundManager Sound;
     public bool Attacking;
     public bool Attack;
 
@@ -25,8 +26,10 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                Sound.PlaySfx("Shoot_Weap");
                 Anim.SetBool("Attack", true);
-                Instantiate(projectile, shotPos.position, shotPos.rotation);
+                GameObject Proj = Instantiate(projectile, shotPos.position, shotPos.rotation);
+                Proj.GetComponent<ProjectilePlayer>().Sound = Sound;
                 timeBtwShots = startTimeBtwShots;
             }
         }

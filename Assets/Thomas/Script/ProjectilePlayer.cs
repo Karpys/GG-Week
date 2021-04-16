@@ -8,6 +8,7 @@ public class ProjectilePlayer : MonoBehaviour
     public float lifeTime;
     public int damageToGive = 1;
     public float rot;
+    public SoundManager Sound;
     //public GameObject destroyEffect;
 
     private void Start()
@@ -48,6 +49,7 @@ public class ProjectilePlayer : MonoBehaviour
         if(other.gameObject.tag.Equals("Enemy"))
         {
             //other.gameObject.GetComponent<Ennemy>().HurtEnemy(damageToGive);
+            Sound.PlaySfx("Hit");
             other.gameObject.GetComponent<Ennemy>().Spawn.Counter -= 1;
             Instantiate(other.gameObject.GetComponent<Ennemy>().Ondie, other.gameObject.transform.position, other.gameObject.transform.rotation);
             Instantiate(other.gameObject.GetComponent<Ennemy>().OnHit, new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z-1), other.gameObject.transform.rotation);
